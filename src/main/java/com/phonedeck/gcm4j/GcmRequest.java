@@ -20,7 +20,7 @@ public class GcmRequest {
     private String collapseKey;
 
     @JsonProperty("data")
-    private Map<String, String> data = new LinkedHashMap<String, String>();
+    private Map<String, Object> data = new LinkedHashMap<>();
 
     @JsonProperty("notification")
     private Map<String, String> notification = new LinkedHashMap<String, String>();
@@ -96,7 +96,7 @@ public class GcmRequest {
         return this;
     }
 
-    public GcmRequest withData(Map<String, String> data) {
+    public GcmRequest withData(Map<String, Object> data) {
         setData(data);
         return this;
     }
@@ -203,11 +203,11 @@ public class GcmRequest {
         this.collapseKey = collapseKey;
     }
 
-    public Map<String, String> getData() {
+    public Map<String, Object> getData() {
         return data;
     }
 
-    public void setData(Map<String, String> data) {
+    public void setData(Map<String, Object> data) {
         this.data = data;
     }
 

@@ -33,7 +33,7 @@ public class GcmRequestTest {
         request.setTimeToLive(360);
         request.setRegistrationIds(Arrays.asList("12345"));
         request.setPriority("normal");
-        Map<String, String> data = new HashMap<>();
+        Map<String, Object> data = new HashMap<>();
         data.put("key", "value");
         request.setData(data);
 
